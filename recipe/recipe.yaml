@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: cp2k
-  version: "2026.1"
+  version: "2026.2"
   mpi_prefix: "mpi_${{ mpi }}"
 
 package:
@@ -11,10 +11,10 @@ package:
 
 source:
   - url: https://github.com/${{ name }}/${{ name }}/releases/download/v${{ version }}/${{ name }}-${{ version }}.tar.bz2
-    sha256: 4364c74bcffaa474bc234e11686b09550e4d06932acf2147a341e4f7679dd88e
+    sha256: f9bd86f580f57a53a0768c0045d1417f9f9a1d66d851ed7f662f496200043373
 
 build:
-  number: 13
+  number: 0
   script: build.sh
   string: mpi_${{ mpi }}_h${{ hash }}_${{ build_number }}
   skip:
